@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import { PrimerComponent } from "./components/PrimerComponent/PrimerComponent.jsx"
+import { ContadorApp } from "./components/ContadorApp/ContadorApp.jsx";
+import { ListadoApp } from "./components/ListadoApp/ListadoApp.jsx";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ListadoApp/>
+      <ContadorApp value={0}/>
+      <PrimerComponent
+        titulo="esta sección es de props"
+        subtitulo="este es el subtítulo"
+        indice={5}
+        />
+      <PrimerComponent
+        titulo="título de ejemplo"
+        subtitulo="subtítulo de ejemplo"
+        indice={1}
+      /> 
     </div>
   );
 }
